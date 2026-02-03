@@ -1,11 +1,28 @@
-import React from 'react'
-import './Navbar.css'
+import React from "react";
+import "./Navbar.css";
+import { assets } from "./../../assets/assets";
 function Navbar() {
   return (
-    <div>
-      
+    <div className="navbar">
+      <img src={assets.logo} alt="ByteBites Logo" />
+      <ul className="navbar-menu">
+        <li>home</li>
+        <li>menu</li>
+        <li>mobile-app</li>
+        <li>contact us</li>
+      </ul>
+      <div className="navbar-right">
+        <img src={assets.search_icon} alt="Search Icon" />
+        <div className="navbar-search-icon">
+          <img src={assets.basket_icon} alt="" />
+          <div className="dot"></div>
+        </div>
+        <button>
+            sign in 
+        </button>
+      </div>
     </div>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;
