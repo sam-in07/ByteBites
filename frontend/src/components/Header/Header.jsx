@@ -1,8 +1,22 @@
 import React from 'react'
-
+import './Header.css'
 const Header = () => {
   return (
-    <div>Header</div>
+    <div className="header">
+      <div className="header-contents">
+        <h2>
+          Welcome to ByteBites - Your Gateway to Delicious Digital Dining!
+        </h2>
+        <p>
+          Choose from a  diverse menu featuring a delectable array of dishes crafted with the
+          finest ingredients and prepared with care . our mission is to satisfy your cravings
+          and elevate your dining experience, one byte at a time.
+        </p>
+        <button>
+          View Menu
+        </button>
+      </div>
+    </div>
   )
 }
 
