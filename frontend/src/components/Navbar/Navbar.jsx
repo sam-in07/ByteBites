@@ -2,14 +2,14 @@ import React from "react"
 import "./Navbar.css"
 import { assets } from "../../assets/assets"
 import { NavLink } from "react-router-dom"
-import { useStore } from "../../Context/StoreContext"
+
 
 const Navbar = () => {
-  const { cartCount } = useStore()
+  
 
   return (
     <div className="navbar">
-      <img src={assets.logo} alt="ByteBites Logo" className="navbar-logo" />
+      <img src={assets.logo} alt="ByteBites Logo" />
       <ul className="navbar-menu">
         <li>
           <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
@@ -29,7 +29,9 @@ const Navbar = () => {
         <div className="navbar-search-icon">
           <NavLink to="/cart">
             <img src={assets.basket_icon} alt="Cart" />
-            {cartCount > 0 && <div className="dot">{cartCount}</div>}
+            {/* { cartCount > 0 &&  */
+            <div className="dot"></div>
+            }
           </NavLink>
         </div>
         <button>sign in</button>
