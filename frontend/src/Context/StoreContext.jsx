@@ -1,18 +1,22 @@
-import React, { createContext, useState } from 'react'
+import { createContext } from "react";
 
-export const StoreContext = createContext()
+import { food_list } from "../assets/assets";
 
-export const StoreProvider = ({ children }) => {
-  const [cartItems, setCartItems] = useState({})
+export const StoreContext = createContext(null)
 
-  const value = {
-    cartItems,
-    setCartItems
+const StoreContextProvider = (props) =>{
+
+
+  const contextValue = {
+    food_list
   }
 
   return (
-    <StoreContext.Provider value={value}>
-      {children}
+    <StoreContext.Provider value={contextValue}>
+      {props.children}
     </StoreContext.Provider>
   )
+
 }
+
+export default StoreContextProvider;
