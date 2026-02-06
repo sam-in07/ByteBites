@@ -29,9 +29,8 @@ const Navbar = () => {
         <div className="navbar-search-icon">
           <NavLink to="/cart">
             <img src={assets.basket_icon} alt="Cart" />
-            {/* { cartCount > 0 &&  */
+            {/* { cartCount > 0 &&  */}
             <div className="dot"></div>
-            }
           </NavLink>
         </div>
         <button>sign in</button>
