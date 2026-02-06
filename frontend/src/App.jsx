@@ -1,11 +1,17 @@
 import React from 'react'
-import Navbar from './pages/Navbar/Navbar'
+import Navbar from './components/Navbar/Navbar'
+import { BrowserRouter } from 'react-router-dom'
+import { StoreProvider } from './Context/StoreContext'
 
 const App = () => {
   return (
-    <div className='app'>
-      <Navbar />
-    </div>
+    <StoreProvider>
+      <BrowserRouter>
+        <div className='app'>
+          <Navbar />
+        </div>
+      </BrowserRouter>
+    </StoreProvider>
   )
 }
 
