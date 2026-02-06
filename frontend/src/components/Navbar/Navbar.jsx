@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <img src={assets.logo} alt="ByteBites Logo" />
+      <img src={assets.logo} alt="ByteBites Logo" className="navbar-logo" />
       <ul className="navbar-menu">
         <li>
           <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>Home</NavLink>
