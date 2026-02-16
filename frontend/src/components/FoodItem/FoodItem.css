@@ -44,7 +44,7 @@
     bottom: 15px;  
     right: 15px;  
     cursor: pointer;  
-    border-radius: 56%;  
+    border-radius: 50%;  
 }  
 .food-item-counter{  
     position: absolute;  

@@ -7,7 +7,21 @@ export const StoreContext = createContext(null)
 const StoreContextProvider = (props) =>{
 
   const url = "http://localhost:4000"
-  const [cartItems, setCartItems] = useState({})
+  const [cartItems, setCartItems] = useState({});
+
+
+
+// **Short explanation:**
+
+// * `useState({})` → creates state with an empty object (cart starts empty).
+// * `cartItems` → current cart data.
+// * `setCartItems` → function to update the cart.
+// * You must use `setCartItems()` to change the cart so React re-renders.
+
+
+
+
+
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
