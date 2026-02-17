@@ -10,7 +10,7 @@
 }
 .explore-menu-text{
     max-width: 60%;
-    columns: #808080;
+    color: #808080;
 }
 .explore-menu-list{
     display: flex;
@@ -25,8 +25,9 @@
 display: none;
 }
 .explore-menu-list-item img{
-    width: 7.5vw;
-    min-height: 80px;
+    width: clamp(56px, 7.5vw, 90px);
+    height: clamp(56px, 7.5vw, 90px);
+    object-fit: cover;
     cursor: pointer;
     border-radius: 50%;
     transition: 0.2s;
