@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 import { food_list } from "../assets/assets";
 
@@ -9,14 +9,6 @@ const StoreContextProvider = (props) =>{
   const url = "http://localhost:4000"
   const [cartItems, setCartItems] = useState({});
 
-
-
-// **Short explanation:**
-
-// * `useState({})` → creates state with an empty object (cart starts empty).
-// * `cartItems` → current cart data.
-// * `setCartItems` → function to update the cart.
-// * You must use `setCartItems()` to change the cart so React re-renders.
 
 
 
@@ -34,6 +26,10 @@ const StoreContextProvider = (props) =>{
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
   }
+   
+  // useEffect(()=>{
+  //   console.log(cartItems);
+  // }, [cartItems])
 
   const contextValue = {
     food_list,
