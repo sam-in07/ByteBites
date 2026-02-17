@@ -2,7 +2,9 @@ import React from 'react'
 import "./AppDownload.css"
 const AppDownload = () => {
   return (
-    <div>AppDownload</div>
+    <div className='app-downaload' id >
+
+    </div>
   )
 }
 
