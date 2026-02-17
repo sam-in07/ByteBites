@@ -9,10 +9,7 @@ const Footer = () => {
         <div className="footer-content-left">
           <img src={assets.logo} alt="" />
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
-            corporis quia quam laborum fuga error ipsa eveniet ipsum dolore
-            ratione hic accusantium obcaecati quaerat culpa totam quibusdam,
-            aliquid voluptatem cupiditate.
+           Tomato is a food delivery service that connects customers with local restaurants. We offer a wide variety of cuisines and dishes, and our easy-to-use platform makes it simple to order food online. Whether you're craving pizza, sushi, or something else, Tomato has you covered. Our mission is to provide delicious food and excellent service to our customers, while also supporting local businesses.
           </p>
           <div className="footer-social-icons">
             {/* div.x  & img*n   */}
