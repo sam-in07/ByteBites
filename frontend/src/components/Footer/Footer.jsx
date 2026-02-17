@@ -40,6 +40,10 @@ const Footer = () => {
           </ul>
         </div>
       </div>
+      <hr />
+      <p className="footer-copyright">
+        &copy; 2026 All rights reserved | @Chainsamin;
+      </p>
     </div>
   );
 };
