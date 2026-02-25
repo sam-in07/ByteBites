@@ -20,13 +20,16 @@ export const Cart = () => {
           if (cartItems[item._id] > 0) {
             return (
               <div>
-                <div className="cart-items-title  cart-items-item"></div>
-                <img src={item.image} alt="" />
-                <p>{item.name}</p>
-                <p>{item.price}</p>
-                <p>{cartItems[item._id]}</p>
-                <p>{item.price * cartItems[item._id]}</p>
-                <p>x</p>
+                <div className="cart-items-title  cart-items-item">
+                  <img src={item.image} alt="" />
+                  <p>{item.name}</p>
+                  <p>{item.price}</p>
+                  <p>{cartItems[item._id]}</p>
+                  <p>{item.price * cartItems[item._id]}</p>
+                  <p>x</p>
+                </div>
+
+                <hr />
               </div>
             );
           }
