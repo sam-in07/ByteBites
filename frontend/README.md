@@ -1,16 +1,55 @@
-# React + Vite
+Here’s a clear breakdown of the two React Hooks you asked about:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🔹 `useState`
+- **What it is**: A React Hook that lets you add **state** (data that changes over time) to a functional component.
+- **Syntax**:
+  ```jsx
+  const [state, setState] = useState(initialValue);
+  ```
+  - `state`: the current value.
+  - `setState`: a function to update that value.
+  - `initialValue`: the starting value (e.g., `0`, `""`, `false`, or an object).
+- **Example**:
+  ```jsx
+  const [count, setCount] = useState(0);
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  <button onClick={() => setCount(count + 1)}>Increase</button>
+  ```
+  → Every click updates `count`, and React re-renders the component with the new value.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🔹 `useContext`
+- **What it is**: A React Hook that lets you read values from a **Context**.  
+  Context is React’s way of sharing data globally without passing props down through every level (avoiding “prop drilling”).
+- **Syntax**:
+  ```jsx
+  const value = useContext(MyContext);
+  ```
+  - `MyContext`: created with `React.createContext()`.
+  - `value`: whatever the `Provider` supplies (could be state, functions, or objects).
+- **Example**:
+  ```jsx
+  const ThemeContext = React.createContext("light");
 
-## Expanding the ESLint configuration
+  function MyComponent() {
+    const theme = useContext(ThemeContext);
+    return <p>Current theme: {theme}</p>;
+  }
+  ```
+  → If the provider sets `ThemeContext.Provider value="dark"`, then `theme` will be `"dark"`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ⚡ Key Difference
+| Hook        | Purpose | Example Use Case |
+|-------------|---------|------------------|
+| **useState** | Manages local state inside a single component | A counter, form input, toggle button |
+| **useContext** | Consumes shared/global state from a Context Provider | Theme, authentication, cart data |
+
+---
+
+👉 Think of `useState` as **local memory for one component**, while `useContext` is **shared memory across many components**.  
+
