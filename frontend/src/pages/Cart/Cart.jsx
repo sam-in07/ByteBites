@@ -45,21 +45,27 @@ export const Cart = () => {
       <div className="cart-bottom">
         <div className="cart-total">
           <h2>Cart Totals</h2>
-          <div className="cart-total-details">
-            <p>Subtotal</p>
-            <p>৳{getTotalCartAmount()}</p>
+          <div>
+            <div className="cart-total-details">
+              <p>Subtotal</p>
+              <p>৳{getTotalCartAmount()}</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <p>Delivary Fee</p>
+              <p>৳{getTotalCartAmount() > 0 ? 100 : 0}</p>
+            </div>
+            <hr />
+            <div className="cart-total-details">
+              <p>Total</p>
+              <p>
+                ৳{getTotalCartAmount() + (getTotalCartAmount() > 0 ? 100 : 0)}
+              </p>
+            </div>
           </div>
-          <hr />
-          <div className="cart-total-details">
-            <p>Delivary Fee</p>
-            <p>৳{100}</p>
-          </div>
-          <hr />
-          <div className="cart-total-details">
-            <p>Total</p>
-            <p>৳{getTotalCartAmount() + 100}</p>
-          </div>
-          <button onClick={()=>navigate('/placeorder')}>PROCEED TO CHECKOUT</button>
+          <button onClick={() => navigate("/placeorder")}>
+            PROCEED TO CHECKOUT
+          </button>
         </div>
         <div className="cart-promocode">
           <div>
