@@ -59,7 +59,7 @@ export const Cart = () => {
             <p>Total</p>
             <p>৳{getTotalCartAmount() + 100}</p>
           </div>
-          <button onClick={()=>navigate('/order')}>PROCEED TO CHECKOUT</button>
+          <button onClick={()=>navigate('/placeorder')}>PROCEED TO CHECKOUT</button>
         </div>
         <div className="cart-promocode">
           <div>
