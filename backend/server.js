@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { connectDB } from './config/db.js';
 import foodRouter from './routes/foodRoute.js';
+import userRouter from './routes/userRoute.js';
 
 //app config
 
@@ -11,7 +12,7 @@ const port = 4000;
 //middleware
 app.use(express.json()); //for parsing application/json
 app.use(cors());//to allow cross-origin requests access from frontend
-
+app.use("/api/user", userRouter);
 //db config
 
 connectDB();
