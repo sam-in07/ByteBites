@@ -7,6 +7,10 @@ import validator from "validator";
 
 const loginUser = async (req, res) => {};
 
+const createToken = (id) => {
+  return jwt.sign({ id }, process.env.JWT_SECRET);
+};
+
 //register
 
 const registerUser = async (req, res) => {
@@ -46,6 +50,9 @@ const registerUser = async (req, res) => {
       email: email,
       password: hashedPassword,
     });
+
+    // new user saved to db
+    const user = await newUser.save();
   } catch (error) {}
 };
 
