@@ -12,7 +12,7 @@ const port = 4000;
 //middleware
 app.use(express.json()); //for parsing application/json
 app.use(cors());//to allow cross-origin requests access from frontend
-app.use("/api/user", userRouter);
+
 //db config
 
 connectDB();
@@ -24,6 +24,7 @@ connectDB();
 app.use("/api/food", foodRouter);
 app.use("/images", express.static('uploads')); //to serve static files from uploads directory
 //http://localhost:4000/images/1772271107946-food_5.png
+app.use("/api/user", userRouter);
 
 
 
