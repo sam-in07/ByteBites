@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 import { food_list } from "../assets/assets";
 
@@ -8,7 +8,10 @@ const StoreContextProvider = (props) => {
   const url = "http://localhost:4000";
   const [cartItems, setCartItems] = useState({});
 
-  const [token, setToken] = useState("");
+  // read token from localStorage when component first renders
+  const [token, setToken] = useState(() =>
+    localStorage.getItem("token") ?? ""
+  );
 
   const addToCart = (itemId) => {
     if (!cartItems[itemId]) {
@@ -35,6 +38,8 @@ const StoreContextProvider = (props) => {
     }
     return totalAmount;
   };
+
+
 
   const contextValue = {
     food_list,
