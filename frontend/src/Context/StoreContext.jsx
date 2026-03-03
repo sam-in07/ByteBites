@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 import { food_list } from "../assets/assets";
 
@@ -7,6 +7,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   const url = "http://localhost:4000";
   const [cartItems, setCartItems] = useState({});
+  const [food_list,setFoodList]=useState([]);
 
   // read token from localStorage when component first renders
   const [token, setToken] = useState(() =>
