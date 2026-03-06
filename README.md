@@ -4,6 +4,9 @@
 
 ![alt text](image.png)
 
+
+#### YT Vedio :=> [ByteBites YT Uploads](https://youtube.com/playlist?list=PLa1XRahOdH1qYyBoUtRE5iuuOiMoRzdYB&si=SgwTTGHegg8I4B0o)
+
 ## 📌 Project Description
 
 **ByteBites** is a **Full Stack Food Delivery Web Application** built using the **MERN Stack (MongoDB, Express.js, React.js, Node.js)** with **Stripe payment integration**.
