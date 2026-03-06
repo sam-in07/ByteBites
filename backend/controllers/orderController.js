@@ -43,8 +43,22 @@ const placeOrder = async (req, res) => {
       success_url: `${frontend_url}/verify?success=true&orderId=${newOrder._id}`,
       cancel_url: `${frontend_url}/verify?success=false&orderId=${newOrder._id}`,
     });
-    
-  } catch (error) {}
+    res.json({ success: true, session_url: session.url });
+  } catch (error) {
+    console.log(error);
+    res.json({ success: false, message: "Error" });
+  }
 };
 
 export { placeOrder };
+
+/*
+front url
+crete neworder
+save order in DB
+clening user cart dta
+create line items for stripe
+create stripe session
+return session url to frontend
+
+*/
