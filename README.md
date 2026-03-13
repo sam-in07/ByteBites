@@ -477,4 +477,7 @@ npm create vite@latest
 https://fonts.google.com/specimen/Outfit 
 
 rafce 
+
+
+[https://docs.stripe.com/testing#international-cards](https://docs.stripe.com/testing#international-cards)
 ------------------
