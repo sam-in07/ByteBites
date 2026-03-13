@@ -45,6 +45,16 @@
   background-color: grey;
   border: none;
 }
+.footer-copyright a {
+  color: #b40b0b;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.footer-copyright a:hover {
+  color: #f1c40f; /* highlight color on hover */
+}
 @media (max-width: 750px) {
   .footer-content {
     display: flex;
@@ -55,5 +65,3 @@
     text-align: center;
   }
 }
-
-

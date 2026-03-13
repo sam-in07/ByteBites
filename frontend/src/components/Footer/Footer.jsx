@@ -9,7 +9,12 @@ const Footer = () => {
         <div className="footer-content-left">
           <img src={assets.logo} alt="" />
           <p>
-           Tomato is a food delivery service that connects customers with local restaurants. We offer a wide variety of cuisines and dishes, and our easy-to-use platform makes it simple to order food online. Whether you're craving pizza, sushi, or something else, Tomato has you covered. Our mission is to provide delicious food and excellent service to our customers, while also supporting local businesses.
+            Tomato is a food delivery service that connects customers with local
+            restaurants. We offer a wide variety of cuisines and dishes, and our
+            easy-to-use platform makes it simple to order food online. Whether
+            you're craving pizza, sushi, or something else, Tomato has you
+            covered. Our mission is to provide delicious food and excellent
+            service to our customers, while also supporting local businesses.
           </p>
           <div className="footer-social-icons">
             {/* div.x  & img*n   */}
@@ -39,7 +44,14 @@ const Footer = () => {
       </div>
       <hr />
       <p className="footer-copyright">
-        &copy; 2026 All rights reserved | @Chainsamin;
+        &copy; 2026 All rights reserved |{" "}
+        <a
+          href="https://github.com/sam-in07"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          @Chainsamin
+        </a>
       </p>
     </div>
   );
