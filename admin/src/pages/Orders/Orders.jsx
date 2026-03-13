@@ -5,7 +5,7 @@ import {toast} from "react-toastify"
 import {assets} from "../../assets/assets"
 
 
-import { axios } from 'axios';
+import axios from 'axios';
 
 
 const Orders = ({url}) => {
