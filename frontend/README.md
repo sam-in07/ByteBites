@@ -54,4 +54,7 @@ Here’s a clear breakdown of the two React Hooks you asked about:
 👉 Think of `useState` as **local memory for one component**, while `useContext` is **shared memory across many components**.  
 
 
+Gigaman
+gigaman@gmail.com
+12345678
 

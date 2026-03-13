@@ -16,7 +16,7 @@ const placeOrder = async (req, res) => {
       address: req.body.address,
     });
     await newOrder.save();
-    await userModel.findByIdAndUpdate(req.body.id, { cartData: {} });
+    await userModel.findByIdAndUpdate(req.user.id, { cartData: {} });
     const line_items = req.body.items.map((item) => ({
       price_data: {
         currency: "bdt",
@@ -68,7 +68,7 @@ const verifyOrder = async (req, res) => {
 
 const userOrders = async (req, res) => {
   try {
-    const orders = await orderModel.find({ userId: req.body.id  });
+    const orders = await orderModel.find({ userId: req.user.id  });
     res.json({ success: true, data: orders });
   } catch (error) {
     console.log(error);
