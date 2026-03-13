@@ -325,6 +325,83 @@ GitHub:
 [chainsamino07](https://github.com/sam-in07)
 ---
 
+
+
+## 🔄 SDLC Model
+
+The development of **ByteBites** followed the **Agile SDLC Model**. Agile allows the project to be developed in **small iterations**, where features are built, tested, and improved continuously.
+
+This approach helped in gradually implementing core functionalities such as **authentication, food listing, cart management, order processing, and payment integration**.
+
+### Agile Development Phases Used in ByteBites
+
+### 1️⃣ Planning
+
+The project idea and scope were defined — building a **Full Stack Food Delivery Web Application** where users can browse food items, place orders, and pay securely online.
+
+### 2️⃣ Requirement Analysis
+
+Key system requirements were identified:
+
+* User authentication system
+* Food browsing and category filtering
+* Cart management
+* Online payment using Stripe
+* Order history tracking
+* Admin panel for managing food items and orders
+
+### 3️⃣ Design
+
+The system architecture was designed using the **MERN Stack**:
+
+* **Frontend:** React.js
+* **Backend:** Node.js + Express.js
+* **Database:** MongoDB with Mongoose
+* **Authentication:** JWT + bcrypt
+* **Payment Gateway:** Stripe
+
+### 4️⃣ Implementation (Iterative Development)
+
+Features were implemented step-by-step in iterations:
+
+* User authentication module
+* Food menu and category filtering
+* Cart functionality
+* Order placement system
+* Stripe payment integration
+* Admin dashboard features
+
+### 5️⃣ Testing
+
+Each feature was tested after implementation:
+
+* API testing with Postman
+* Authentication validation
+* Cart and order flow testing
+* Stripe payment testing
+* UI responsiveness testing
+
+### 6️⃣ Deployment & Maintenance
+
+After successful testing, the project can be deployed to production and maintained with:
+
+* Bug fixes
+* Performance improvements
+* Feature updates
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
 # 📄 License
 
 This project is licensed under the **MIT License**.
